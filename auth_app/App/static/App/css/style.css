@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../img/background.svg');
+    background-position: center;
+    overflow-y: hidden;
+}
+
+select {
+    width: 212px;
+    box-shadow: 2px 2px 2px black;
+    border: none;
+    border-radius: 3px;
+    border: 1.5px solid;
+}
+
+.form {
+    height: max-content;
+    width: max-content;
+    background: azure;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 10px;
+    padding: 10px 40px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.fieldWrapper {
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 1px 5px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 2px 2px 2px black;
+    border: 1.5px solid;
+}
+
+.errorlist {
+    margin-top: 0;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 1px;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+a {
+    font-size: larger;
+    color: azure !important;
+}
+
+ul {
+    background: indigo;
+}
+
+.forgot-pwd {
+    color: blue !important;
+    font-size: 14px;
+    padding-left: 35px;
+}

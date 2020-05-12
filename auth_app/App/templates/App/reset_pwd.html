@@ -1,0 +1,30 @@
+{% extends 'App/base.html' %}
+
+{% block body_block %}
+
+<div class="form">
+    <h1>Reset Password</h1>
+    <form action="{% url 'App:reset' %}" method="POST">
+        {% csrf_token %}
+
+        <div class="fieldWrapper">
+            {{ reset_form.username.errors }}
+            {{ reset_form.username.label_tag }}<br>
+            {{ reset_form.username }}
+        </div>
+        <div class="fieldWrapper">
+            {{ reset_form.password.errors }}
+            {{ reset_form.password.label_tag }}<br>
+            {{ reset_form.password }}
+        </div>
+        <div class="fieldWrapper">
+            {{ reset_form.conf_password.errors }}
+            {{ reset_form.conf_password.label_tag }}<br>
+            {{ reset_form.conf_password }}
+        </div>
+
+        <button type="submit" class="btn btn-primary">RESET</button>
+    </form>
+</div>
+
+{% endblock %}

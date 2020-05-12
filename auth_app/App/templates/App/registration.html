@@ -1,0 +1,47 @@
+{% extends 'App/base.html' %}
+
+{% block body_block %}
+
+{% if registered %}
+<div class="heading">
+    <h1>Thank you for registering!</h1>
+</div>
+{% else %}
+<div class="form">
+    <h1>Register Here!</h1>
+    <h3>Fill out the form</h3>
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="fieldWrapper">
+            {{ user_form.username.errors }}
+            {{ user_form.username.label_tag }}<br>
+            {{ user_form.username }}
+        </div>
+        <div class="fieldWrapper">
+            {{ user_form.email.errors }}
+            {{ user_form.email.label_tag }}<br>
+            {{ user_form.email }}
+        </div>
+        <div class="fieldWrapper">
+            {{ user_form.password.errors }}
+            {{ user_form.password.label_tag }}<br>
+            {{ user_form.password }}
+        </div>
+        <div class="fieldWrapper">
+            {{ user_profile_form.gender.errors }}
+            {{ user_profile_form.gender.label_tag }}<br>
+            {{ user_profile_form.gender }}
+        </div>
+        <div class="fieldWrapper">
+            {{ user_profile_form.nationality.errors }}
+            {{ user_profile_form.nationality.label_tag }}<br>
+            {{ user_profile_form.nationality }}
+        </div>
+        <button type="submit" class="btn btn-primary">REGISTER</button>
+    </form>
+</div>
+{% endif %}
+
+
+{% endblock %}
