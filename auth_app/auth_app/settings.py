@@ -91,8 +91,8 @@ PASSWORD_HASHERS = [
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'parmar.manav2000@gmail.com'
-EMAIL_HOST_PASSWORD = 'Parmar.2000'
+EMAIL_HOST_USER = 'your mail_id'
+EMAIL_HOST_PASSWORD = 'yourpassword'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
